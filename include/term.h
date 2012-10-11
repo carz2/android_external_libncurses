@@ -55,7 +55,7 @@ extern "C" {
  */
 
 #undef  NCURSES_CONST
-#define NCURSES_CONST const
+#define NCURSES_CONST /*nothing*/
 
 #undef  NCURSES_SBOOL
 #define NCURSES_SBOOL char
@@ -83,7 +83,7 @@ extern "C" {
 #else /* !HAVE_TERMIOS_H */
 
 /* #if HAVE_TERMIO_H */
-#if 1
+#if 0
 
 #undef  TERMIOS
 #define TERMIOS 1

@@ -46,14 +46,16 @@
 #ifndef NC_CONFIG_H
 #define NC_CONFIG_H
 
-#define SYSTEM_NAME "linux-gnu"
+#define SYSTEM_NAME "eabi"
 #define CC_HAS_PROTOS 1
+#if 0
+void exit (int);
+#endif
 #define HAVE_LONG_FILE_NAMES 1
 #define MIXEDCASE_FILENAMES 1
 #define USE_DATABASE 1
-#define TERMINFO_DIRS "/system/etc/terminfo"
-#define TERMINFO "/usr/share/terminfo"
-#define HAVE_BIG_CORE 1
+#define TERMINFO_DIRS "/usr/local/share/terminfo"
+#define TERMINFO "/usr/local/share/terminfo"
 #define PURE_TERMINFO 1
 #define USE_HOME_TERMINFO 1
 #define USE_ROOT_ENVIRON 1
@@ -61,7 +63,7 @@
 #define HAVE_UNLINK 1
 #define HAVE_LINK 1
 #define HAVE_SYMLINK 1
-#define USE_SYMLINKS 1
+#define USE_LINKS 1
 #define HAVE_FSEEKO 1
 #define HAVE_CURSES_VERSION 1
 #define HAVE_HAS_KEY 1
@@ -85,23 +87,19 @@
 #define USE_SIGWINCH 1
 #define USE_ASSUMED_COLOR 1
 #define USE_HASHMAP 1
-#define USE_COLORFGBG 1
 #define GCC_SCANF 1
 #define GCC_PRINTF 1
 #define GCC_UNUSED __attribute__((unused))
 #define GCC_NORETURN __attribute__((noreturn))
 #define NDEBUG 1
-#define NO_LEAKS 1
 #define HAVE_NC_ALLOC_H 1
 #define HAVE_GETTIMEOFDAY 1
 #define STDC_HEADERS 1
 #define HAVE_DIRENT_H 1
 #define TIME_WITH_SYS_TIME 1
-#define HAVE_REGEX_H_FUNCS 1
 #define HAVE_FCNTL_H 1
 #define HAVE_GETOPT_H 1
 #define HAVE_LIMITS_H 1
-#define HAVE_LOCALE_H 1
 #define HAVE_POLL_H 1
 #define HAVE_SYS_IOCTL_H 1
 #define HAVE_SYS_PARAM_H 1
@@ -109,15 +107,15 @@
 #define HAVE_SYS_SELECT_H 1
 #define HAVE_SYS_TIME_H 1
 #define HAVE_SYS_TIMES_H 1
-#define HAVE_TTYENT_H 1
 #define HAVE_UNISTD_H 1
 #define HAVE_WCTYPE_H 1
 #define HAVE_SYS_TIME_SELECT 1
 #define SIG_ATOMIC_T volatile sig_atomic_t
+#define TYPEOF_CHTYPE long
 #define HAVE_GETCWD 1
 #define HAVE_GETEGID 1
 #define HAVE_GETEUID 1
-#define HAVE_GETTTYNAM 1
+#define HAVE_ISSETUGID 1
 #define HAVE_POLL 1
 #define HAVE_REMOVE 1
 #define HAVE_SELECT 1
@@ -125,29 +123,21 @@
 #define HAVE_SETBUFFER 1
 #define HAVE_SETVBUF 1
 #define HAVE_SIGACTION 1
-#define HAVE_SIGVEC 1
 #define HAVE_STRDUP 1
 #define HAVE_STRSTR 1
 #define HAVE_TCGETPGRP 1
 #define HAVE_TIMES 1
 #define HAVE_VSNPRINTF 1
 #define HAVE_ISASCII 1
-#define HAVE_NANOSLEEP 1
-
-#ifndef HAVE_TERMIO_H
-#define HAVE_TERMIO_H 1
-#endif
-
 #define HAVE_TERMIOS_H 1
 #define HAVE_UNISTD_H 1
 #define HAVE_TCGETATTR 1
 #define HAVE_VSSCANF 1
-#define HAVE_MKSTEMP 1
 #define RETSIGTYPE void
 #define HAVE_SIZECHANGE 1
-#define HAVE_WORKING_POLL 1
-#define USE_OPENPTY_HEADER <pty.h>
-#define USE_XTERM_PTY 1
+#define HAVE_IOSTREAM 1
+#define HAVE_TYPEINFO 1
+#define CPP_HAS_STATIC_CAST 1
 #define HAVE_SLK_COLOR 1
 #define HAVE_PANEL_H 1
 #define HAVE_LIBPANEL 1
